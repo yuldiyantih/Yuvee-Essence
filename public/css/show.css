@@ -1,0 +1,155 @@
+/* ========== DETAIL PRODUK ========== */
+.product-detail {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+    background: #fff5f7; /* warna dasar tetap */
+}
+
+/* Kontainer utama (kotak isi detail produk) */
+.product-detail .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    /* 🌸 gradasi baru dari atas ke bawah */
+    background: linear-gradient(to bottom, #ee9ca7, #ffdde1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Gambar produk */
+.image-section img {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+/* Info produk */
+.info-section {
+    text-align: center;
+    color: #4e0714;
+}
+
+.info-section h2 {
+    font-size: 1.8rem;
+    color: #4e0714;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #4e0714;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.netto {
+    color: #4e0714;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+/* Jumlah (Qty) */
+.qty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.qty button {
+    background: linear-gradient(135deg, #a30f4c, #e9a7b1);
+    border: none;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.qty button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #c67d87, #e19cab);
+}
+
+.qty input {
+    width: 60px;
+    text-align: center;
+    margin: 0 10px;
+    border: 1px solid #d58f99;
+    border-radius: 8px;
+    padding: 5px;
+    color: #4e0714;
+}
+
+/* Tombol aksi */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Tombol utama */
+.btn-group button {
+    padding: 10px 22px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    color: #fff7ec; /* teks warna deep maroon */
+    background-color: #a30f4c; /* warna dasar baru */
+    box-shadow: 0 3px 8px rgba(213, 143, 153, 0.3);
+}
+
+/* efek hover halus */
+.btn-group button:hover {
+    background-color: #c67d87;
+    transform: translateY(-2px);
+}
+
+.btn-group button:hover {
+    background: linear-gradient(135deg, #c67d87, #de96a0);
+    transform: translateY(-2px);
+}
+
+/* Deskripsi produk */
+.desc {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #4e0714;
+}
+
+.desc h3 {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #4e0714;
+}
+
+.desc p {
+    color: #4e0714;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .product-detail .container {
+        padding: 25px;
+    }
+    .desc {
+        max-width: 100%;
+    }
+}

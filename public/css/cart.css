@@ -1,0 +1,124 @@
+/* ===========================================================
+   STYLE UNTUK HALAMAN CART / KERANJANG
+   =========================================================== */
+
+.cart-section,
+.cart-page {
+    background: linear-gradient(180deg, #fbe7eb 0%, #fbd4da 40%, #f9c2ca 100%);
+    padding: 60px 100px;
+    border-radius: 20px;
+    margin: 30px auto;
+    width: 95%;
+    box-shadow: 0 8px 30px rgba(242, 128, 138, 0.25);
+    color: #780b0d;
+}
+
+/* Judul */
+.cart-page h2 {
+    text-align: center;
+    color: #9a0002;
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+/* Pesan kosong */
+.empty-cart {
+    text-align: center;
+    font-size: 16px;
+    color: #780b0d;
+    margin-bottom: 20px;
+}
+
+.empty-cart a {
+    color: #9a0002;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ===========================================================
+   TABEL KERANJANG
+   =========================================================== */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff5f7;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.cart-table th {
+    background: #dd3a44; /* warna lebih gelap agar lebih kontras */
+    color: #fff;
+    padding: 14px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cart-table td {
+    padding: 14px;
+    border-bottom: 1px solid #f3c0c4;
+    text-align: center;
+    color: #780b0d;
+}
+
+/* Gambar produk */
+.cart-table img {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(242, 128, 138, 0.3);
+    object-fit: cover;
+}
+
+/* ===========================================================
+   GAYA TOMBOL (Update, Hapus, Lanjut Belanja, Checkout)
+   =========================================================== */
+.btn,
+.btn-update,
+.btn-remove,
+.btn-checkout,
+.btn-back {
+    display: inline-block;
+    background: linear-gradient(180deg, #771023 0%, #771023 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(242, 128, 138, 0.25);
+}
+
+/* Hover efek */
+.btn:hover,
+.btn-update:hover,
+.btn-remove:hover,
+.btn-checkout:hover,
+.btn-back:hover {
+    background: linear-gradient(180deg, #e97e8c 0%, #c95c69 100%);
+    transform: translateY(-2px);
+}
+
+/* ===========================================================
+   BAGIAN TOTAL & AKSI
+   =========================================================== */
+.cart-total {
+    text-align: right;
+    color: #780b0d;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.cart-total span {
+    color: #9a0002;
+}
+
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}

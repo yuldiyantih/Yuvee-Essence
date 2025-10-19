@@ -1,0 +1,803 @@
+/* ===============================
+        YUVEE ESSENCE STYLE 
+   =============================== */
+
+/* ---------- VARIABEL WARNA ---------- */
+:root {
+    --primary: #8a2020;
+    --accent: #dfb0b0;
+    --bg: #fff3f3;
+    --text-dark: #5a2b2b;
+}
+
+/* ---------- DASAR ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* ===========================================================
+                     HEADER ATAS
+   =========================================================== */
+.topbar {
+    background: var(--primary);
+    color: white;
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.topbar-left {
+    font-weight: 500;
+}
+
+.topbar .search-cart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.topbar .search-cart input {
+    border-radius: 20px;
+    border: none;
+    padding: 6px 12px;
+    outline: none;
+}
+
+.topbar .search-cart button {
+    background: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.topbar .search-cart button:hover {
+    background: var(--accent);
+}
+
+/* ===========================================================
+                     🛒 TAMBAHAN: KERANJANG BELANJA
+   =========================================================== */
+/* ===========================================================
+                     🛒 TAMBAHAN: KERANJANG BELANJA
+   =========================================================== */
+.cart-btn {
+    position: relative;
+    background: linear-gradient(
+        to bottom,
+        #f1a6ad,
+        #d58f99
+    ); /* 🌸 gradasi lebih terang */
+    border: none;
+    border-radius: 50%;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #4e0714; /* warna ikon lebih kontras */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.cart-btn:hover {
+    background: linear-gradient(
+        to bottom,
+        #ffc5cc,
+        #e6a4ae
+    ); /* efek hover lembut */
+    transform: scale(1.05);
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ===========================================================
+                     NAVBAR
+   =========================================================== */
+
+.navbar {
+    background: #fce4e4;
+    padding: 14px 80px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.logo .brand {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 1.6rem;
+}
+
+.logo span {
+    color: #d67c8d;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 3px;
+}
+
+/* ===========================================================
+                     HERO SECTION 
+   =========================================================== */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ffdce5, #ffe6ec);
+    padding: 100px 160px;
+    border-radius: 20px;
+    gap: 50px;
+    margin: 40px auto;
+    width: 94%;
+    animation: fadeInUp 1.2s ease-in-out;
+    box-shadow: 0 8px 25px rgba(255, 150, 170, 0.25);
+}
+
+/* Animasi fade masuk */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text h1 {
+    color: #a61b2b;
+    font-size: 3.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #6e1d1d;
+    margin-bottom: 50px;
+    max-width: 580px;
+}
+
+/*  Tombol Shop Now dengan efek gerak dan timbul */
+.shop-btn {
+    background: linear-gradient(90deg, #a61b2b, #d6455d);
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 18px 55px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(166, 27, 43, 0.35);
+    text-decoration: none;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+}
+
+/* Glow halus saat hover */
+.shop-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 28px rgba(166, 27, 43, 0.65);
+}
+
+/* Efek shine bergerak – SELALU terlihat */
+.shop-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.1)
+    );
+    transform: skewX(-25deg);
+    z-index: 2;
+    animation: shineMove 3s linear infinite;
+}
+
+/* Efek menekan saat disentuh */
+.shop-btn:active {
+    transform: translateY(4px) scale(0.98);
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.25),
+        0 4px 10px rgba(166, 27, 43, 0.25);
+}
+
+/* Animasi shine bergerak */
+@keyframes shineMove {
+    0% {
+        left: -75%;
+    }
+    50% {
+        left: 125%;
+    }
+    100% {
+        left: 125%;
+    }
+}
+
+.hero-img img {
+    width: 480px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===========================================================
+                     BEST SELLER SECTION 
+   =========================================================== */
+.bestseller-section {
+    text-align: center;
+    padding: 70px 120px;
+    background: linear-gradient(180deg, #ffe6ec 0%, #f3b4bc 40%, #d38c92 100%);
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    border-radius: 20px;
+    gap: 50px;
+    width: 94%;
+    margin: 40px auto;
+    box-shadow: 0 0 80px rgba(211, 140, 146, 0.2),
+        inset 0 0 60px rgba(255, 255, 255, 0.4);
+}
+
+.bestseller-section h2 {
+    color: #a61b2b;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/*  Perbaikan: tinggi kartu konsisten & tombol sejajar */
+.product-card {
+    background: linear-gradient(180deg, #ffd6dc 0%, #f9c2cc 50%, #fbdde3 100%);
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 20px rgba(211, 140, 146, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 430px; /* tambahkan tinggi minimum agar sejajar */
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(211, 140, 146, 0.45);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    color: #8a2e38;
+    margin-bottom: 10px;
+    font-weight: 600;
+    min-height: 40px; /* agar tinggi nama produk rata */
+}
+
+.product-card p {
+    color: #6b232c;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/*  Tombol Add to Cart diposisikan presisi di tengah */
+.product-card .cart-btn {
+    background: linear-gradient(90deg, #a61b2b, #d6455d);
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 18px rgba(166, 27, 43, 0.3);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+
+    /* ✅ Tambahan agar tombol benar-benar di tengah */
+    align-self: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* efek glow + shine */
+.product-card .cart-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(166, 27, 43, 0.5);
+}
+
+.product-card .cart-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: all 0.6s ease;
+}
+
+.product-card .cart-btn:hover::after {
+    left: 100%;
+}
+
+/* ===========================================================
+                    essence-highlight section
+   =========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;500&display=swap");
+
+.essence-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #f2808a 0%, #f8b7c0 50%, #ffe0e6 100%);
+    border-radius: 20px;
+    padding: 70px 120px;
+    flex-wrap: wrap;
+    gap: 60px;
+    width: 94%;
+    margin: 40px auto;
+
+    /* efek pinggir sama seperti bestseller */
+    box-shadow: 0 0 80px rgba(211, 140, 146, 0.2),
+        inset 0 0 60px rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 200, 210, 0.6);
+}
+
+/* TEKS - ESSENCE HIGHLIGHT */
+.highlight-text {
+    flex: 1;
+    max-width: 620px;
+    color: #6e1d1d;
+}
+
+.highlight-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #a61b2b;
+}
+
+.highlight-text p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    color: #6e1d1d;
+}
+
+/* TOMBOL SHOP NOW */
+.btn {
+    background-color: #6b1e28;
+    color: #fff;
+    border: none;
+    padding: 22px 70px;
+    border-radius: 12px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(107, 30, 40, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek glow dan shine */
+.btn:hover {
+    background-color: #541621;
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(107, 30, 40, 0.6);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: all 0.6s ease;
+}
+
+.btn:hover::after {
+    left: 100%;
+}
+
+/* GAMBAR */
+.highlight-img {
+    flex: 1;
+    text-align: right;
+}
+
+.highlight-img img {
+    max-width: 110%;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(255, 150, 170, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.highlight-img img:hover {
+    transform: translateY(-10px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .essence-highlight {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 40px;
+    }
+
+    .highlight-text h2 {
+        font-size: 3rem;
+    }
+
+    .highlight-text p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 18px 55px;
+        font-size: 1.2rem;
+    }
+
+    .highlight-img img {
+        max-width: 100%;
+    }
+}
+
+/* ===========================================================
+                    FOOTER section
+   =========================================================== */
+.footer {
+    background: linear-gradient(0deg, #f2808a 0%, #f8b7c0 50%, #ffe0e6 100%);
+    padding: 70px 120px;
+    border-top: 2px solid rgba(255, 200, 210, 0.6);
+    border-radius: 20px;
+    width: 94%;
+    margin: 40px auto;
+    position: relative;
+    box-shadow: 0 0 80px rgba(211, 140, 146, 0.2),
+        inset 0 0 60px rgba(255, 255, 255, 0.4);
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-logo img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.footer-logo h3 {
+    font-size: 1.25rem;
+    color: #6e1d1d;
+    margin-bottom: 4px;
+}
+
+.footer-logo p {
+    color: #8f5558;
+    font-size: 0.9rem;
+}
+
+/* Footer Links */
+.footer-links ul {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 8px;
+}
+.footer-links a {
+    color: #6a2b2d;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: #a62b38;
+}
+
+/* Footer Contact */
+.footer-contact h4 {
+    color: #6a2b2d;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+.footer-contact p {
+    font-size: 0.95rem;
+    color: #7b3b3e;
+    margin-bottom: 10px;
+}
+.footer-contact form {
+    display: flex;
+    gap: 8px;
+}
+.footer-contact input {
+    padding: 8px 10px;
+    border: 1px solid #c28b8f;
+    border-radius: 4px;
+}
+.footer-contact button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #a0616a;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.footer-contact button:hover {
+    background-color: #b86b74;
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    color: #7b3b3e;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* ---------- RESPONSIF ---------- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 40px;
+    }
+
+    .hero-img img {
+        width: 320px;
+    }
+
+    .sale {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 40px;
+    }
+
+    .sale-img img {
+        width: 280px;
+        margin-top: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-contact form {
+        justify-content: center;
+    }
+}
+
+/* ===========================================================
+                     CART PAGE (KERANJANG)
+   =========================================================== */
+.cart-page {
+    background: linear-gradient(to bottom right, #f7d8d2, #eac4af);
+    padding: 60px 100px;
+    border-radius: 20px;
+    width: 94%;
+    margin: 40px auto;
+    color: #4e0714;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 0 0 40px rgba(212, 143, 153, 0.3);
+}
+
+.cart-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #4e0714;
+    font-weight: 700;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fffaf9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(200, 100, 110, 0.2);
+}
+
+.cart-table th {
+    background-color: #d58f99;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cart-table td {
+    text-align: center;
+    padding: 20px;
+    color: #4e0714;
+    font-weight: 500;
+}
+
+.cart-table img {
+    width: 80px;
+    border-radius: 10px;
+}
+
+.quantity-control input {
+    width: 60px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #d58f99;
+    text-align: center;
+}
+
+.remove-btn {
+    background-color: #d58f99;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #b86d76;
+}
+
+/* TOTAL */
+.cart-total {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4e0714;
+}
+
+.cart-total span {
+    color: #a0293d;
+}
+
+/* BUTTONS */
+.cart-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-buttons .btn {
+    background-color: #d58f99;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(213, 143, 153, 0.4);
+}
+
+.cart-buttons .btn:hover {
+    transform: scale(1.05);
+    background-color: #c4747e;
+}
+
+/* Tombol checkout kanan, lanjut kiri */
+.cart-buttons .lanjut i {
+    margin-right: 8px;
+}
+.cart-buttons .checkout i {
+    margin-left: 8px;
+}
+
+/* Kosong */
+.empty-cart {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #4e0714;
+    margin-bottom: 25px;
+}
