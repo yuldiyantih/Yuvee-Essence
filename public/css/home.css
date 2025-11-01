@@ -345,7 +345,7 @@ body {
     color: #8a2e38;
     margin-bottom: 10px;
     font-weight: 600;
-    min-height: 40px; /* agar tinggi nama produk rata */
+    min-height: 40px;
 }
 
 .product-card p {
@@ -369,7 +369,7 @@ body {
     position: relative;
     overflow: hidden;
 
-    /* ✅ Tambahan agar tombol benar-benar di tengah */
+    /*  Tambahan agar tombol benar-benar di tengah */
     align-self: center;
     margin: 0 auto;
     display: flex;
@@ -449,7 +449,7 @@ body {
     color: #6e1d1d;
 }
 
-/* TOMBOL SHOP NOW */
+/* TOMBOL EXPLORE OUR COLECTION */
 .btn {
     background-color: #6b1e28;
     color: #fff;
@@ -464,6 +464,7 @@ body {
     box-shadow: 0 0 20px rgba(107, 30, 40, 0.3);
     position: relative;
     overflow: hidden;
+    text-decoration: none;
 }
 
 /* Efek glow dan shine */

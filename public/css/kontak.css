@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 
-/* ✨ Efek kilau lembut pink */
+/*  Efek kilau lembut pink */
 .contact-section::before,
 .contact-section::after {
     content: "";
@@ -42,7 +42,7 @@
     animation-delay: 3s;
 }
 
-/* 🌷 Kotak utama kontainer */
+/*  Kotak utama kontainer */
 .contact-container {
     max-width: 950px;
     width: 90%;
@@ -111,7 +111,7 @@
     margin: 20px 0;
 }
 
-/* 🩰 Catatan akhir */
+/*  Catatan akhir */
 .contact-note {
     font-style: italic;
     color: #81202a;
