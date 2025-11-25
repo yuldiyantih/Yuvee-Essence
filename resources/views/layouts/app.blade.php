@@ -11,6 +11,9 @@
 
     {{-- ✅ Font Poppins --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    {{-- ✅ Font Awesome untuk ikon profil --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -33,6 +36,13 @@
                     <span class="cart-count">{{ count(session('cart')) }}</span>
                     @endif
                 </a>
+
+                {{-- 👤 Tombol menuju halaman profil --}}
+                <a href="{{ route('profile.index') }}" class="profile-btn">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+
+
             </div>
         </div>
     </header>
@@ -67,6 +77,7 @@
                 <h3>Yuvee Essence</h3>
                 <p>Kecantikan yang alami, dari hati.</p>
             </div>
+
             {{-- 🔹 Link navigasi --}}
             <div class="footer-links">
                 <h3>Explore</h3>
@@ -75,7 +86,6 @@
                     <li><a href="{{ route('kontak') }}">contact</a></li>
                     <li><a href="/kebijakan-privasi">Kebijakan Privasi</a></li>
                     <li><a href="{{ route('syarat') }}">Syarat & Ketentuan</a></li>
-
                 </ul>
             </div>
 

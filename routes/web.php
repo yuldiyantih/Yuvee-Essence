@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController; // 🛒 tambahkan controller keranjang
+use App\Http\Controllers\ProfileController; // 👤 tambahkan controller untuk profil
+
 
 // ============= halaman umum =============
 // Halaman utama home
@@ -24,6 +26,7 @@ Route::get('/kebijakan-privasi', [PageController::class, 'kebijakanPrivasi'])->n
 // Halaman syarat-ketentuan
 Route::get('/syarat-ketentuan', [PageController::class, 'syaratKetentuan'])->name('syarat');
 
+
 // ============= halaman produk =============
 // Halaman daftar produk
 Route::get('/produk', [ProductController::class, 'index'])->name('produk.index');
@@ -31,11 +34,12 @@ Route::get('/produk', [ProductController::class, 'index'])->name('produk.index')
 // Halaman detail produk
 Route::get('/produk/{id}', [ProductController::class, 'show'])->name('produk.show');
 
-// Halaman kategori produk
-Route::get('/kategori/{slug}', [ProductController::class, 'category'])->name('produk.category');
+// Halaman kategori produk (PAKAI ID)
+Route::get('/kategori/{id}', [ProductController::class, 'category'])->name('produk.category');
 
 // Halaman checkout produk
 Route::get('/checkout/{id}', [ProductController::class, 'checkout'])->name('produk.checkout');
+
 
 
 // ============= fitur keranjang (cart) =============
@@ -45,6 +49,9 @@ Route::post('/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
 // Tombol "Beli Langsung" → langsung ke checkout
 Route::post('/cart/buy/{id}', [CartController::class, 'buy'])->name('cart.buy');
 
+// ✅ Tambahan baru — halaman checkout gabungan
+Route::get('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+
 // Halaman utama keranjang
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
@@ -53,3 +60,19 @@ Route::put('/cart/update/{id}', [CartController::class, 'update'])->name('cart.u
 
 // Hapus item dari keranjang
 Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+
+
+// ============= Halaman Profil =============
+
+// Halaman Personal Information (index saja)
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+
+// Simpan data profil (TAMBAH PROFIL)
+Route::post('/profile', [ProfileController::class, 'store'])->name('profile.store');
+
+// Update data profil (UBAH PROFIL)
+Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+// Hapus banyak data dengan centang
+Route::delete('/profile/mass-delete', [ProfileController::class, 'massDelete'])
+    ->name('profile.massDelete');

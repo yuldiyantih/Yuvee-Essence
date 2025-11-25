@@ -8,32 +8,48 @@ use Carbon\Carbon;
 
 class CategorySeeder extends Seeder
 {
-    /**
-     * Jalankan seeder untuk kategori */
     public function run(): void
     {
         DB::table('categories')->insert([
             [
-                'name' => 'Makeup',
-                'slug' => 'makeup',
+                'name' => 'Lipstik',
+                'slug' => 'lipstik',
+                'description' => 'Kategori untuk produk lipstik',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name' => 'Skincare',
-                'slug' => 'skincare',
+                'name' => 'Eyeshadow',
+                'slug' => 'eyeshadow',
+                'description' => 'Kategori untuk produk eyeshadow',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name' => 'Hair Care',
-                'slug' => 'hair-care',
+                'name' => 'Foundation',
+                'slug' => 'foundation',
+                'description' => 'Kategori untuk produk foundation',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name' => 'Fragrance',
-                'slug' => 'fragrance',
+                'name' => 'Mascara',
+                'slug' => 'mascara',
+                'description' => 'Kategori untuk produk mascara',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Blush-On',
+                'slug' => 'blush-on',
+                'description' => 'Kategori untuk produk blush-on',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Powder',
+                'slug' => 'powder',
+                'description' => 'Kategori untuk produk powder',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],

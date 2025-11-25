@@ -1,0 +1,95 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #fff9f9;
+    color: #333;
+}
+
+header {
+    background-color: #ffb6c1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav ul li a.active {
+    color: #d63384;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffe4ec;
+}
+
+.produk-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    padding: 40px 50px;
+}
+
+.produk-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.produk-card:hover {
+    transform: translateY(-8px);
+}
+
+.produk-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produk-card h3 {
+    margin: 10px 0 5px;
+}
+
+.produk-card button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.produk-card button:hover {
+    background-color: #b52d6b;
+}
+
+footer {
+    text-align: center;
+    background-color: #ffe4ec;
+    padding: 15px 0;
+    margin-top: 40px;
+}

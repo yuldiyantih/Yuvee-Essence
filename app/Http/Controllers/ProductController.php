@@ -3,38 +3,38 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    // 🛍️ Menampilkan semua produk di halaman produk utama
     public function index()
     {
-        // Ambil semua produk urut dari yang terbaru
-        $products = Product::orderBy('id', 'desc')->get();
-
-        // Kirim ke view produk/index.blade.php
+        $products = Product::orderBy('id', 'asc')->get();
         return view('produk.index', compact('products'));
     }
 
-    // 🔎 Menampilkan detail produk berdasarkan ID (untuk tombol View More)
+    // 🔎 Detail produk
     public function show($id)
     {
-        // Cari produk berdasarkan ID, jika tidak ditemukan maka error 404
         $product = Product::findOrFail($id);
 
-        // Kirim data produk ke view produk/show.blade.php
         return view('produk.show', compact('product'));
     }
 
-    // 🏷️ Menampilkan produk berdasarkan kategori (nanti disambungkan ke tabel kategori)
-    public function category($slug)
+    // 📂 Produk berdasarkan kategori (PAKAI ID, BUKAN SLUG)
+    public function category($id)
     {
-        // Placeholder sementara
-        return "Halaman kategori: $slug";
+        // Cari kategori berdasarkan id
+        $category = Category::findOrFail($id);
+
+        // Ambil produk berdasarkan category_id
+        $products = Product::where('category_id', $category->id)->get();
+
+        return view('produk.category', compact('category', 'products'));
     }
 
-    // 💳 Halaman checkout (opsional)
+    // 💳 Checkout
     public function checkout($id)
     {
         $product = Product::findOrFail($id);

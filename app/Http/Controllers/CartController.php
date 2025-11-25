@@ -88,4 +88,37 @@ class CartController extends Controller
 
         return redirect()->route('cart.index')->with('success', 'Produk dihapus dari keranjang.');
     }
+
+    // 💳 Beli Sekarang (langsung checkout 1 produk)
+    public function buy($id)
+    {
+        $product = Product::findOrFail($id);
+
+        // Simpan produk sementara untuk checkout langsung
+        session()->put('buy_now', [
+            'id' => $product->id,
+            'name' => $product->name,
+            'price' => $product->price,
+            'image' => $product->image ?? 'default.png',
+        ]);
+
+        return redirect()->route('cart.checkout');
+    }
+
+    // 🧾 Halaman checkout gabungan (keranjang & beli langsung)
+    public function checkout()
+    {
+        $cart = session()->get('cart', []);
+        $buyNow = session()->get('buy_now');
+
+        if ($buyNow) {
+            $items = [$buyNow];
+            $total = $buyNow['price'];
+        } else {
+            $items = $cart;
+            $total = collect($cart)->sum(fn($item) => $item['price'] * $item['quantity']);
+        }
+
+        return view('produk.belanja', compact('items', 'total'));
+    }
 }

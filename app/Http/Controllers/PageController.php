@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product; // ✅ Tambahkan ini untuk akses tabel produk
+use App\Models\Product; // akses tabel produk
 
 class PageController extends Controller
 {
@@ -12,12 +12,13 @@ class PageController extends Controller
      */
     public function home()
     {
-        // ✅ Ambil 3 produk teratas dari database
+        // Ambil 3 produk bestseller dari database
+        // Pastikan tabel 'products' punya kolom image, name, price, dst.
         $products = Product::take(3)->get();
 
         return view('home', [
             'judul' => 'Home | Yuvee Essence',
-            'products' => $products, // kirim data produk ke view
+            'products' => $products, // kirim data ke view
         ]);
     }
 
